@@ -51,5 +51,6 @@ function greatestNumeber3(arr){
         if(arr[i] > greatest) { greatest = arr[i]}
     }
     return greatest
+    
 };
 
