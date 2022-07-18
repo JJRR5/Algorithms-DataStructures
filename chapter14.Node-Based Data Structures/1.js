@@ -19,7 +19,8 @@ const { createImportSpecifier } = require("typescript")
 
 */
 
-class ListNode{
+
+class Node{
     constructor(data){
         this.data = data
         this.next = null
@@ -59,12 +60,45 @@ class LinkedList{
     getFirst() {
         return this.head;
     }
+
 }
 
-let node1 =  new ListNode(2)
-let node2 = new ListNode(5)
+let node1 =  new Node(2)
+let node2 = new Node(5)
 node1.next = node2
 
 let linkedList = new LinkedList(node1)
 
-console.log(linkedList.head.next.data)
+/* 
+    Whean daling  with a linked list, we only have inmediate access to its first node
+    
+    1.- Reading
+    To get any node, we always need to stat with the first node, and follow the chain of nodes until we reach the node we want
+    BigO => O(N)
+
+    2.- Searching 
+    It takes O(N) steps to search for a value
+
+    3.- Insertion
+    This is the moment for the linked lists
+    BigO => O(1) 
+    WorstCase => O(N + 1)
+
+    Each of these three operations are the oppositive in an array in terms of petformance:
+    Scenario                    |       Array        |    LinkedList
+    Inserting at the begining        Worst case           Best Case
+    Inserting at the middle          Average Case         Average Case  
+    Insert at the end                 Best Case           Worst Case   
+
+    4.- Deletion
+    Linked lists shine when it comes to deletion as well
+    this takes O(1) steps when it's at the begining of the linked list 
+    an in a worst case takes O(N) steps
+
+    Efficiency of Linked List Operations
+    Reading => O(N)
+    Searching => O(N)
+    Insertion => O(N) (O(1) at the beginning)
+    Deletion => O(N) (O(1) at the beginning)
+    
+*/
