@@ -41,6 +41,14 @@ class DoublyLinkedList
         @first_node = @first_node.next_node
     end
 
+    def print_all_elements_reverse
+        @first_node = @last_node
+
+        while @first_node
+            @first_node = @last_node.previous_node
+            puts @first_node
+        end
+    end
 end
 
 =begin
@@ -62,7 +70,7 @@ class Queue
     def enqueue(element)
         @data.insert_at_end(element)
     end
- 
+
     def dequeue
         remove_node = @data.remove_from_front
         return remove_node.data

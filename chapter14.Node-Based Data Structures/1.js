@@ -1,10 +1,6 @@
 //Node Based DS are build upon a single concept - the node.
 //A node are pieces of data that may be dispersed throught the computer's memory.
 
-const { createImportSpecifier } = require("typescript")
-
-
-
 
 //Linked List
 //the data from a linked list can be scattered across different cells throughout the computer's memory
@@ -12,7 +8,7 @@ const { createImportSpecifier } = require("typescript")
     Connect data that is dispersed throughout memory are known as nodes.
     Each node represents an item in the list.
 
-    => This is the key of th elinked list: each node also comes with a little extra information, namely, the memory address of the next node in the list. This extra piece of data is known as a link. The final node's link cotains null since linked list ends there.
+    => This is the key of the linked list: each node also comes with a little extra information, namely, the memory address of the next node in the list. This extra piece of data is known as a link. The final node's link cotains null since linked list ends there.
 
     first node => head
     last node => tail
@@ -73,7 +69,7 @@ let linkedList = new LinkedList(node1)
     Whean daling  with a linked list, we only have inmediate access to its first node
     
     1.- Reading
-    To get any node, we always need to stat with the first node, and follow the chain of nodes until we reach the node we want
+    To get any node, we always need to start with the first node, and follow the chain of nodes until we reach the node we want
     BigO => O(N)
 
     2.- Searching 
